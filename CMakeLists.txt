@@ -10,6 +10,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LEDState.msg"
   "msg/LEDStateArray.msg"
+  "msg/OffboardNavCommand.msg"
   "srv/GetTelemetry.srv"
   "srv/GPIOSend.srv"
   "srv/GPIOSetup.srv"
