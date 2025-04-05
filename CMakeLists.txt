@@ -16,6 +16,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GPIOSetup.srv"
   "srv/LEDPixelColor.srv"
   "srv/LEDRingColor.srv"
+  "srv/LEDEffect.srv"
   "srv/Load.srv"
   "srv/Navigate.srv"
   "srv/Run.srv"
