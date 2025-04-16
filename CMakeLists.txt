@@ -25,6 +25,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SetPosition.srv"
   "srv/SetYaw.srv"
   "srv/Store.srv"
+  "srv/ServoControl.srv"
  )
 
  ament_export_dependencies(rosidl_default_runtime)

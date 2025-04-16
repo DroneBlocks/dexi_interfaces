@@ -1,0 +1,18 @@
+# Pin number to control
+int32 pin
+
+# Desired angle (0-180 degrees)
+int32 angle
+
+# Optional: Minimum pulse width in microseconds (defaults to 500)
+int32 min_pw
+
+# Optional: Maximum pulse width in microseconds (defaults to 2500)
+int32 max_pw
+
+---
+# Success flag
+bool success
+
+# Status message
+string message
