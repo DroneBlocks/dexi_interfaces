@@ -7,10 +7,13 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LEDState.msg"
   "msg/LEDStateArray.msg"
   "msg/OffboardNavCommand.msg"
+  "msg/YoloDetection.msg"
+  "msg/YoloDetectionArray.msg"
   "srv/GetTelemetry.srv"
   "srv/GPIOSend.srv"
   "srv/GPIOSetup.srv"
@@ -28,7 +31,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ServoControl.srv"
   "srv/SetGpio.srv"
   "srv/ReadGpio.srv"
- )
+ 
+  DEPENDENCIES std_msgs
+)
 
  ament_export_dependencies(rosidl_default_runtime)
 
