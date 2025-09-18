@@ -1,0 +1,7 @@
+# Request
+string firmware_path    # Path to the firmware file to flash
+---
+# Response
+bool success           # True if flash was successful
+string message         # Status message or error description
+int32 exit_code       # Exit code from flash process
