@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/OffboardNavCommand.msg"
   "msg/YoloDetection.msg"
   "msg/YoloDetectionArray.msg"
+  "srv/FlashFirmware.srv"
   "srv/GetTelemetry.srv"
   "srv/GPIOSend.srv"
   "srv/GPIOSetup.srv"
