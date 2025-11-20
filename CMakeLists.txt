@@ -32,7 +32,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ServoControl.srv"
   "srv/SetGpio.srv"
   "srv/ReadGpio.srv"
- 
+  "srv/ExecuteBlocklyCommand.srv"
+
   DEPENDENCIES std_msgs
 )
 

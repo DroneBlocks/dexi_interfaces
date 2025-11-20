@@ -1,0 +1,9 @@
+# Request
+string command              # Command identifier (e.g., "takeoff", "fly_forward", "yaw_left")
+float32 parameter           # Distance in meters or angle in degrees
+float32 timeout             # Maximum time to wait for completion (seconds), 0 = no timeout
+---
+# Response
+bool success                # True if command completed successfully
+string message              # Status message or error description
+float32 execution_time      # Actual time taken to complete command (seconds)
