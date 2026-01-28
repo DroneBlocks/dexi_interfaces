@@ -2,6 +2,18 @@
 string command              # Command identifier (e.g., "takeoff", "fly_forward", "yaw_left")
 float32 parameter           # Distance in meters or angle in degrees
 float32 timeout             # Maximum time to wait for completion (seconds), 0 = no timeout
+
+# NED navigation fields (for goto_ned command)
+float32 north               # North coordinate in NED frame (meters)
+float32 east                # East coordinate in NED frame (meters)
+float32 down                # Down coordinate in NED frame (meters, negative = up)
+float32 yaw                 # Yaw angle (degrees)
+
+# LED pixel fields (for led_pixel command)
+int32 index                 # LED pixel index (0-based)
+int32 r                     # Red component (0-255)
+int32 g                     # Green component (0-255)
+int32 b                     # Blue component (0-255)
 ---
 # Response
 bool success                # True if command completed successfully
