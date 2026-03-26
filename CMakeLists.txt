@@ -17,6 +17,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ChallengeStart.msg"
   "msg/ChallengeStatus.msg"
   "msg/ChallengeResult.msg"
+  "msg/ColorDetection.msg"
+  "msg/ColorDetectionArray.msg"
   "srv/FlashFirmware.srv"
   "srv/GetTelemetry.srv"
   "srv/GPIOSend.srv"
@@ -36,6 +38,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SetGpio.srv"
   "srv/ReadGpio.srv"
   "srv/ExecuteBlocklyCommand.srv"
+  "srv/LLMChat.srv"
 
   DEPENDENCIES std_msgs
 )
