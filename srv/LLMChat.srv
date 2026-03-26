@@ -1,0 +1,7 @@
+# Request
+string prompt
+---
+# Response
+string response
+string[] commands_executed
+bool success
