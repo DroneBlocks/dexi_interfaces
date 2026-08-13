@@ -19,6 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ChallengeResult.msg"
   "msg/ColorDetection.msg"
   "msg/ColorDetectionArray.msg"
+  "msg/HandGestureDetection.msg"
   "srv/FlashFirmware.srv"
   "srv/GetTelemetry.srv"
   "srv/GPIOSend.srv"
