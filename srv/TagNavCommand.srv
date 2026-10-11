@@ -1,0 +1,17 @@
+# One AprilTag navigation step for tag_nav, served on /dexi/tag_nav/command.
+# The call returns when the step is done (or failed), not when it is sent.
+
+# Request
+string command      # center_on_tag, hold_on_tag, fly_until_tag, wait_for_tag,
+                    # wait_for_offboard
+int32 tag_id        # the tag to use; -1 = any tag
+float32 hold_s      # hold_on_tag: seconds to stay over the tag
+float32 forward     # fly_until_tag: body-frame velocity (m/s), forward positive
+float32 right       # right positive
+float32 down        # down positive (normally 0: height is held)
+float32 timeout     # seconds before the step gives up; 0 = the node's default
+---
+# Response
+bool success        # true when the step completed
+string message      # what happened, e.g. "centered on tag 3: 4 cm", "lost tag 3 for 8.0 s"
+float32 execution_time  # seconds the step took
