@@ -38,6 +38,8 @@ All definitions are in `msg/` or `srv/` at the package root.
 | Flight actions | `SetPosition` | `dexi_offboard` | Position setpoint |
 | Flight actions | `SetAltitude` | `dexi_offboard` | Altitude-only setpoint |
 | Flight actions | `SetYaw` | `dexi_offboard` | Yaw-only setpoint |
+| Flight actions | `FlightCommand` | `dexi_offboard` on `/dexi/flight/command` | One flight step (arm, takeoff, fly, land, ...); returns when the step is done |
+| AprilTag navigation | `TagNavCommand` | `dexi_apriltag` tag_nav on `/dexi/tag_nav/command` | One tag step (center, hold, fly until a tag, wait for a tag) |
 | Flight telemetry | `GetTelemetry` | `dexi_offboard` | One-shot telemetry snapshot |
 | LED | `LEDEffect` | `dexi_led` | Trigger a named animation |
 | LED | `SetLedEffect` | `dexi_led` | Alternate trigger API used by Blockly |
@@ -48,7 +50,7 @@ All definitions are in `msg/` or `srv/` at the package root.
 | GPIO | `SetGpio` | `dexi_gpio` / `dexi_cpp` | Alternate write API used by Blockly |
 | GPIO | `ReadGpio` | `dexi_gpio` / `dexi_cpp` | Read an input pin |
 | Servo | `ServoControl` | `dexi_cpp` servo controller | Drive a servo via PCA9685 |
-| Code execution | `ExecuteBlocklyCommand` | Blockly runtime | Execute a Blockly-generated command |
+| Code execution | `ExecuteBlocklyCommand` | `dexi_offboard`, tag_nav | Deprecated: the old name for `FlightCommand` and `TagNavCommand`, still served on `/dexi/execute_blockly_command` and `/dexi/tag_nav/execute` |
 | Code execution | `Run` | Blockly runtime | Start a stored program |
 | Code execution | `Load` | Blockly runtime | Load a program by id/name |
 | Code execution | `Store` | Blockly runtime | Save a program |

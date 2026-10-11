@@ -39,6 +39,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SetGpio.srv"
   "srv/ReadGpio.srv"
   "srv/ExecuteBlocklyCommand.srv"
+  "srv/FlightCommand.srv"
+  "srv/TagNavCommand.srv"
   "srv/LLMChat.srv"
 
   DEPENDENCIES std_msgs

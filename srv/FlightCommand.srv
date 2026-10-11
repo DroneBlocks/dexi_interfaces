@@ -1,0 +1,19 @@
+# One flight step for the offboard manager, served on /dexi/flight/command.
+# The call returns when the step is done (or failed), not when it is sent.
+
+# Request
+string command      # arm, disarm, offboard_takeoff, land, fly_forward, fly_backward,
+                    # fly_left, fly_right, fly_up, fly_down, yaw_left, yaw_right,
+                    # goto_ned, hold_ned, set_velocity_body, stop_velocity, circle, ...
+float32 value       # meters or degrees, depending on the command (takeoff height,
+                    # distance to fly, angle to turn, circle radius)
+float32 north       # goto_ned / hold_ned: NED position (m). set_velocity_body: body
+float32 east        # velocity (m/s) as forward/right/down
+float32 down        # NED down is positive, so negative is up
+float32 yaw         # goto_ned / hold_ned: heading (deg). set_velocity_body: yaw rate (deg/s)
+float32 timeout     # seconds to wait for the step; 0 = no limit
+---
+# Response
+bool success        # true when the step completed
+string message      # what happened, e.g. "Target reached", "Arm rejected by PX4 ..."
+float32 execution_time  # seconds the step took
